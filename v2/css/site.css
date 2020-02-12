@@ -1,0 +1,1586 @@
+html, body, div, span, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, 
+cite, code, del, dfn, em, img, ins, kbd, q, samp, small, 
+strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, figcaption, figure, footer, header, hgroup, 
+menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none
+}
+
+* {
+    -webkit-text-size-adjust: none
+}
+
+a {
+    text-decoration: none
+}
+
+em {
+    font-style: normal
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+abbr,
+acronym {
+    border: 0
+}
+
+body {
+    background-color: #fff;
+    font-family: Helvetica, Arial, "微軟正黑體", Heiti TC, "メイリオ", sans-serif;
+    font-size: 13px;
+    overflow-x: hidden
+}
+
+a {
+    color: #000;
+    cursor: pointer;
+    transition: all .4s ease
+}
+
+a:hover {
+    color: #000
+}
+
+input[type="text"] {
+    -webkit-appearance: none
+}
+
+textarea {
+    -webkit-appearance: none
+}
+
+.outerWrap {
+    position: relative
+}
+
+.wrap {
+    width: 1160px;
+    margin: 0 auto;
+    box-sizing: border-box
+}
+
+.label {
+    padding: 5px 7px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    transition: all .5s
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box
+}
+
+header .logo {
+    width: 187px
+}
+
+header .logo a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 36px;
+    color: white;
+    font-size: 26px;
+}
+
+header.targetBtn {
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03)
+}
+
+header.targetBtn .menu li .link {
+    padding: 30px 15px;
+    color: #1b1b1b
+}
+
+header.targetBtn .menuBtn:before,
+header.targetBtn .menuBtn:after {
+    background: #535353
+}
+
+header.targetBtn .menuBtn span {
+    background: #535353
+}
+
+@media(min-width:1181px) {
+    header.targetBtn .menu li.current .link {
+        color: #c00008
+    }
+    header.targetBtn .menu li.current .link:before {
+        height: 25px;
+        background-color: #c00008
+    }
+    header.targetBtn .menu li:hover .link {
+        color: #c00008
+    }
+    header.targetBtn .menu li:hover .link:before {
+        height: 25px;
+        background-color: #c00008
+    }
+}
+
+.menuBtn {
+    position: relative;
+    display: none;
+    width: 34px;
+    height: 20px;
+    transition: all .5s
+}
+
+.menuBtn:before,
+.menuBtn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: all .6s cubic-bezier(0.9, 0, 0.1, 1)
+}
+
+.menuBtn:before {
+    top: 0
+}
+
+.menuBtn:after {
+    bottom: 0
+}
+
+.menuBtn span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.5px;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: all .6s cubic-bezier(0.9, 0, 0.1, 1)
+}
+
+.menuBtn.open:before {
+    top: 9.5px;
+    transform: rotate(45deg)
+}
+
+.menuBtn.open:after {
+    bottom: 9.5px;
+    transform: rotate(-45deg)
+}
+
+.menuBtn.open span {
+    transform: translateX(10px);
+    opacity: 0
+}
+
+.menuBox {
+    margin-left: auto
+}
+
+.menu {
+    display: flex
+}
+
+.menu li {
+    position: relative
+}
+
+.menu li .link {
+    position: relative;
+    display: block;
+    min-height: 80px;
+    padding: 50px 15px 30px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: .15em;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out
+}
+
+.menu li .link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -0.5px;
+    width: 1px;
+    height: 0;
+    background: #fff;
+    transition: all .5s
+}
+
+.menu li:hover .link:before {
+    height: 40px
+}
+
+.menu .large {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    background-color: rgba(20, 20, 20, 0.95);
+    color: #fff;
+    letter-spacing: .05em;
+    box-sizing: border-box
+}
+
+.menu .large a {
+    color: #fff
+}
+
+.menu .list {
+    position: relative;
+    flex: 1;
+    max-width: 230px;
+    padding: 0 20px;
+    box-sizing: border-box
+}
+
+.menu .list:not(:last-child):after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #282828
+}
+
+.menu .list dt {
+    margin-bottom: 8px;
+    font-size: 14px
+}
+
+.menu .list dd a {
+    display: block;
+    padding: 7px 0;
+    font-size: 13px;
+    color: #999
+}
+
+.menu .list dd a:hover {
+    color: #fff
+}
+
+footer {
+    position: relative;
+    z-index: 0;
+    padding: 50px 0;
+    overflow: hidden
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 6760px;
+    height: 6760px;
+    background: linear-gradient(to top, #9a0000 0, #eb161a 100%);
+    border-radius: 50%
+}
+
+footer .wrap {
+    width: 100%;
+    max-width: 1200px
+}
+
+.copyright {
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: .1em;
+    font-size: 14px;
+    color: #fff
+}
+
+.copyright a {
+    color: #fff
+}
+
+.copyright .bottom {
+    position: relative;
+}
+
+.copyright .bottom:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 1px;
+    background: #f1a0a1;
+    mix-blend-mode: overlay
+}
+
+.copyright address {
+    display: inline-block;
+    font-style: normal
+}
+
+.jeremy {
+    margin-top: 5px;
+    text-align: center;
+    font: 300 14px "Lato", "微軟正黑體", sans-serif;
+    color: #fff;
+    letter-spacing: .1em
+}
+
+.titleBox em {
+    display: block;
+    padding-bottom: 10px;
+    font: 300 20px "Lato", "微軟正黑體", sans-serif;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    text-align: center
+}
+
+.titleBox span {
+    font-weight: 700;
+    color: red
+}
+
+.titleBox h2 {
+    font: 800 44px "Noto Sans TC", "微軟正黑體", sans-serif;
+    letter-spacing: .1em;
+    color: #3c3c3c;
+    text-align: center
+}
+
+.titleBox.ins {
+    margin-bottom: 40px
+}
+
+.titleBox.ins h2 {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 29px;
+    letter-spacing: .075em;
+    color: #626262
+}
+
+.titleBox.ins h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -34px;
+    width: 68px;
+    height: 1px;
+    background: #e5e5e5
+}
+
+.titleBox.ins h2.noLine:after {
+    display: none
+}
+
+.titleBox.ins .note {
+    font-size: 16px;
+    letter-spacing: .05em;
+    line-height: 1.8;
+    color: #717171;
+    text-align: center
+}
+
+.btn01 a {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 17px 50px;
+    font-family: "Lato", "微軟正黑體", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: .05em;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #ec3849 0, #f35844 100%);
+    transition: all .5s
+}
+
+.btn01 a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #d61619;
+    transition: all .5s
+}
+
+.btn01 a:hover {
+    box-shadow: 0 3px 15.84px .16px rgba(79, 79, 79, 0.25)
+}
+
+.btn01 a:hover:after {
+    opacity: 0
+}
+
+.btn02 a {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 17px 54px;
+    font: 300 15px "Noto Sans TC", "微軟正黑體", sans-serif;
+    color: #fff;
+    letter-spacing: .2em;
+    border-radius: 3px;
+    background: linear-gradient(to right, #d61619 0, #d61619 50%)
+}
+
+.btn02 a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ec3749 0, #f25445 100%);
+    opacity: 0;
+    transition: all 1s
+}
+
+.btn02 a:hover:after {
+    opacity: 1
+}
+
+.btn03 a {
+    display: inline-block;
+    min-width: 150px;
+    margin: 0 18px;
+    padding: 18px 20px;
+    font-size: 15px;
+    letter-spacing: .2em;
+    color: #1b1b1b;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 3px;
+    box-sizing: border-box
+}
+
+.btn03 a:hover {
+    transform: translateY(-5px)
+}
+
+.btn03 a.dark {
+    color: #fff;
+    background-color: #1b1b1b
+}
+
+@media(max-width:1366px) {
+    .menu .large {
+        transform: translateX(-30%)
+    }
+}
+
+@media(max-width:1280px) {
+    header.targetBtn .menu li .link {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}
+
+@media(max-width:1180px) {
+    .wrap {
+        width: 100%;
+        padding: 0 25px
+    }
+    .outerWrap {
+        padding-top: 80px
+    }
+    header .wrap {
+        height: 80px;
+        padding: 0 25px
+    }
+    header.targetBtn .menu li .link {
+        padding: 20px 15px;
+        color: #fff
+    }
+    header.sticky .menu li .link,
+    header.targetBtn .menu li .link {
+        color: #fff
+    }
+    header.sticky .menu li .link:hover,
+    header.targetBtn .menu li .link:hover {
+        color: #fff
+    }
+    .menuBtn {
+        display: block
+    }
+    .menuBox {
+        position: absolute;
+        left: 0;
+        top: 120%;
+        width: 100%;
+        max-height: 100vh;
+        background: #e73437;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .6s ease-in-out;
+        overflow-y: auto;
+        overflow-x: hidden
+    }
+    .menuBox.show {
+        top: 100%;
+        opacity: 1;
+        pointer-events: auto
+    }
+    .menu {
+        flex-wrap: wrap
+    }
+    .menu li {
+        width: 100%;
+        border-bottom: 2px solid #dd282b;
+        transition: all .5s
+    }
+    .menu li:hover,
+    .menu li.open {
+        background: #e3484b
+    }
+    .menu li .link {
+        min-height: auto;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: .1em
+    }
+    .menu li .link:hover {
+        color: #fff
+    }
+    .menu li .link:before {
+        display: none
+    }
+    .menu .large {
+        padding: 0
+    }
+    .menu .list {
+        max-width: 100%;
+        padding: 12px 12px 5px 12px
+    }
+    .menu .list:after {
+        display: none
+    }
+    .menu .list:not(:last-child) {
+        border-bottom: 1px solid #282828;
+        margin-bottom: 5px
+    }
+}
+
+@media(max-width:960px) {
+    footer {
+        background: linear-gradient(to top, #dc0909 0, #eb161a 100%)
+    }
+    footer:before {
+        display: none
+    }
+}
+
+@media(max-width:767px) {
+    .titleBox h2,
+    .titleBox.ins h2 {
+        font-size: 40px
+    }
+}
+
+@media(max-width:480px) {
+    .titleBox h2 {
+        font-size: 28px
+    }
+    footer {
+        padding-bottom: 75px
+    }
+}
+
+.topBox .Txt {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: .05em;
+    color: #717171;
+    text-align: center
+}
+
+header.targetBtn {
+    background: none;
+    box-shadow: none
+}
+
+header.targetBtn .menu li .link {
+    color: #fff
+}
+
+header.targetBtn .menu li:hover .link {
+    color: #fff
+}
+
+header.targetBtn .menu li:hover .link:before {
+    height: 25px;
+    background-color: #fff
+}
+
+header.targetBtn .menuBtn:before,
+header.targetBtn .menuBtn:after {
+    background: #fff
+}
+
+header.targetBtn .menuBtn span {
+    background: #fff
+}
+
+header.sticky {
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03)
+}
+
+header.sticky .logo a {
+    color: black;
+}
+
+header.sticky .menu li .link {
+    color: #fff
+}
+
+header.sticky .menuBtn:before,
+header.sticky .menuBtn:after {
+    background: #535353
+}
+
+header.sticky .menuBtn span {
+    background: #535353
+}
+
+footer:before {
+    top: -160px
+}
+
+@media (min-width:1181px) {
+    header.sticky .menu li .link {
+        color: #1b1b1b
+    }
+    header.sticky .menu li:hover .link {
+        color: #c00008
+    }
+    header.sticky .menu li:hover .link:before {
+        height: 25px;
+        background-color: #c00008
+    }
+}
+
+.sideDot {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10
+}
+
+.sideDot li {
+    padding: 7px 0
+}
+
+.sideDot span {
+    display: block;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: all .7s
+}
+
+.sideDot a {
+    position: relative;
+    display: block;
+    min-height: 15px;
+    padding-right: 30px;
+    font: 300 12px "Lato", "微軟正黑體", sans-serif;
+    color: #fff;
+    letter-spacing: .1em;
+    text-align: right
+}
+
+.sideDot a:before,
+.sideDot a:after {
+    content: '';
+    position: absolute;
+    transition: all .7s
+}
+
+.sideDot a:before {
+    top: 50%;
+    margin-top: -0.5px;
+    right: 15px;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+    opacity: 0;
+    transform: translateX(5px)
+}
+
+.sideDot a:after {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box
+}
+
+.sideDot a:hover:before,
+.sideDot a.current:before {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.sideDot a:hover:after,
+.sideDot a.current:after {
+    background: #fff
+}
+
+.sideDot a:hover span,
+.sideDot a.current span {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.sideDot.dark a {
+    color: #000
+}
+
+.sideDot.dark a:before {
+    background: #000
+}
+
+.sideDot.dark a:after {
+    border-color: rgba(0, 0, 0, 0.5)
+}
+
+.sideDot.dark a:hover:after,
+.sideDot.dark a.current:after {
+    background: #000
+}
+
+.bannerArea {
+    position: relative
+}
+
+.bannerArea .wrap {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e01316 0%, #c20b0c 100%)
+}
+
+.bannerArea .bannerBox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box
+}
+
+.bannerArea h2 {
+    font: 700 180px "Lato", "微軟正黑體", sans-serif;
+    line-height: 1.2;
+    letter-spacing: .03em;
+    background: url("../images/bannerTxtBg_small.jpg") repeat center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent
+}
+
+.bannerArea h1 {
+    margin-bottom: 20px;
+    font: 100 43px "Noto Sans TC", "微軟正黑體", sans-serif;
+    letter-spacing: .12em
+}
+
+.bannerArea h3 {
+    font: 300 15px "Lato", "微軟正黑體", sans-serif;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+.bannerArea .scrollDown {
+    position: absolute;
+    bottom: 58px;
+    left: 50%;
+    margin-left: -29px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid #fff
+}
+
+.bannerArea .scrollDown:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -4.5px;
+    width: 9px;
+    height: 20px;
+    background: url("../images/scrollDown.png") no-repeat;
+    animation: scrollDown 1.5s ease-in-out infinite alternate
+}
+
+.bannerCopyright {
+    position: absolute;
+    left: 40px;
+    bottom: 90px;
+    font: 12px "Open Sans", "微軟正黑體", sans-serif;
+    color: #fff;
+    letter-spacing: .1em;
+    writing-mode: vertical-lr
+}
+
+@keyframes scrollDown {
+    from {
+        transform: translateY(-5px)
+    }
+    to {
+        transform: translateY(5px)
+    }
+}
+
+.aboutArea {
+    position: relative;
+    z-index: 0;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    overflow: hidden
+}
+
+.aboutArea:before,
+.aboutArea:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 140px;
+    width: 100%;
+    height: 5000px;
+    opacity: .35
+}
+
+.aboutArea:before {
+    z-index: -2;
+    background: linear-gradient(to left, #e9f8f6 0%, #f5eef8 100%);
+    transform: skewY(-6deg)
+}
+
+.aboutArea:after {
+    z-index: -1;
+    background: linear-gradient(to right, #e9f8f6 0%, #f5eef8 100%);
+    transform: skewY(6deg)
+}
+
+.aboutArea .wrap {
+    width: 100%;
+    max-width: 1220px
+}
+
+.aboutArea .titleBox {
+    width: 100%;
+    margin-bottom: 60px
+}
+
+.aboutArea .titleBox p {
+    text-align: center;
+    font-size: 22px;
+    color: #717171;
+    padding: 5px 0
+}
+
+.aboutArea .bottomBox {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.aboutArea .bottomBox > div.avatar {
+    flex: 0 0 30%;
+    min-width: 30%
+}
+
+.aboutArea .bottomBox > div.avatar img {
+    max-width: 100%;
+    -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+.aboutArea .bottomBox > div.intro {
+    flex: 0 0 calc(70% - 40px);
+    min-width: calc(70% - 40px);
+    text-align: center;
+    line-height: 1.5;
+    padding-left: 40px;
+}
+
+.aboutArea .btn01 {
+    text-align: center
+}
+
+.workEduArea {
+    padding-top: 100px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden
+}
+
+.workEduArea .wrap {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto
+}
+
+.workEduArea .titleBox {
+    margin-bottom: 60px
+}
+
+.workEduArea .titleBox p {
+    text-align: center;
+    font-size: 22px;
+    color: #717171;
+    padding: 5px 0
+}
+
+.workEduArea .btn01 {
+    text-align: center
+}
+
+.workEduArea .bottom {
+    display: flex;
+}
+
+.workList {
+    width: 100%;
+    box-sizing: border-box
+}
+
+.workList {
+    padding-right: 30px
+}
+
+.workList li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px
+}
+
+.workList li:nth-child(odd) .Img {
+    background-color: #e8f3f9
+}
+
+.workList li:nth-child(even) .Img {
+    background-color: #f5f7fa
+}
+
+.workList li .title,
+.workList li .place {
+    display: inline-block;
+}
+
+.workList .Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%
+}
+
+.workList .Img img {
+    display: block;
+    max-width: 100%
+}
+
+.workList .right {
+    padding-left: 20px;
+    box-sizing: border-box
+}
+
+.workList h3,
+.aboutArea .bottomBox h3 {
+    font-size: 22px;
+    color: #3c3c3c;
+    padding-bottom: 5px
+}
+
+.workList p,
+.aboutArea .bottomBox > div.intro {
+    font-size: 15px;
+    color: #717171;
+    line-height: 1.6;
+    text-align: left;
+    align-self: center;
+}
+
+.portfolioArea {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px
+    padding-bottom: 50px;
+    background-color: #fff;
+}
+
+.portfolioArea .wrap {
+    width: 80%;
+    padding: 0
+}
+
+.portfolioArea .titleBox {
+    padding: 50px 0
+}
+
+.caseList li,
+.caseListTop .left {
+    padding: 5px;
+    box-sizing: border-box
+}
+
+.portfolioArea .item {
+    position: relative
+}
+
+.caseList li:not(.lastMore) .item,
+.caseListTop .item {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.portfolioArea .item:hover .title {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.portfolioArea .Img {
+    width: 100%
+}
+
+.portfolioArea .Img img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.portfolioArea .title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all .5s
+}
+
+.portfolioArea .title a {
+    display: block;
+    padding: 15px 40px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: .05em;
+    background-color: rgba(34, 34, 34, 0.75);
+    box-sizing: border-box
+}
+
+.portfolioArea .lastMore .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #d41012;
+    box-sizing: border-box
+}
+
+.caseListTop {
+    display: flex
+}
+
+.caseListTop .left,
+.caseListTop .right {
+    width: 50%
+}
+
+.caseList {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.caseList li {
+    overflow: hidden
+}
+
+.caseList.right li {
+    width: 50%
+}
+
+.caseList.bottom li {
+    width: 25%
+}
+
+.linkArea {
+    position: relative;
+    display: none;
+    z-index: 2;
+    background: #fff
+}
+
+.linkArea .wrap {
+    padding: 0
+}
+
+.linkList {
+    display: flex
+}
+
+.linkList li {
+    width: 25%
+}
+
+.linkList a {
+    display: block;
+    padding: 90px 12px;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.linkList a:hover {
+    box-shadow: 0px 5px 50px 0px rgba(98, 98, 98, 0.15)
+}
+
+.linkList a:hover em {
+    color: #1b1b1b
+}
+
+.linkList a:hover em:after {
+    background: #1b1b1b
+}
+
+.linkList em {
+    position: relative;
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font: 40px "Lato", "微軟正黑體", sans-serif;
+    letter-spacing: .05em;
+    color: red;
+    transition: all .5s
+}
+
+.linkList em:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 1px;
+    background: red;
+    transition: all .5s
+}
+
+.linkList h3 {
+    font: 300 17px "Noto Sans TC", "微軟正黑體", sans-serif;
+    letter-spacing: .05em
+}
+
+footer {
+    overflow: visible
+}
+
+.contactOuterBox {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ecfffd 0%, #fff3ff 100%)
+}
+
+.contactArea {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px
+}
+
+.contactArea .wrap {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    padding: 1px 16% 0px
+}
+
+.contactArea .wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%;
+    max-width: 1430px;
+    height: 100%;
+    box-shadow: 0px 1px 49.5px 0.5px rgba(98, 98, 98, 0.15);
+    background: #fff;
+    border-radius: 30px 30px 0 0
+}
+
+.contactArea .titleBox {
+    margin-bottom: 16px
+}
+
+.contactArea .titleBox em {
+    font-size: 75px;
+    letter-spacing: .65em
+}
+
+.contactArea .titleBox h2 {
+    font-size: 30px;
+    letter-spacing: .3em
+}
+
+.contactArea .topBox {
+    margin-top: -50px;
+    padding-bottom: 40px
+}
+
+.contactArea .Txt {
+    font-size: 15px;
+    letter-spacing: .05em;
+    text-align: center;
+    color: #717171;
+    line-height: 2
+}
+
+.contactArea .btn02 {
+    padding-bottom: 50px;
+    text-align: center
+}
+
+.contactArea .contactList {
+    display: flex;
+    justify-content: center;
+}
+
+.contactArea .contactList>div {
+    color: gray;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.contactArea .contactList>div a {
+    color: gray;
+}
+
+@media (max-width:1500px) {
+    .bannerArea h2 {
+        font-size: 160px
+    }
+    .portfolioArea .wrap {
+        width: 100%
+    }
+}
+
+@media (max-width:1460px) {
+    .contactArea .wrap {
+        padding-left: 10%;
+        padding-right: 10%
+    }
+    .contactArea .wrap:after {
+        width: calc(100% - 40px)
+    }
+}
+
+@media (max-width:1366px) {
+    .bannerArea h1 {
+        font-size: 36px
+    }
+    .bannerArea h2 {
+        font-size: 140px;
+        line-height: 1.1
+    }
+    .bannerArea h3 {
+        font-size: 14px
+    }
+    .bannerArea .scrollDown {
+        bottom: 24px
+    }
+    .bannerCopyright {
+        left: 30px;
+        bottom: 40px
+    }
+}
+
+@media (max-width:1240px) {
+    .aboutArea .wrap {
+        padding: 0 25px
+    }
+    .workEduArea .wrap {
+        padding: 0 25px
+    }
+    .contactArea .wrap {
+        padding-left: 60px;
+        padding-right: 60px
+    }
+}
+
+@media (max-width:1180px) {
+    header.sticky .menu li>a,
+    header.targetBtn .menu li>a {
+        color: #fff
+    }
+    header.sticky .menu li>a:hover,
+    header.targetBtn .menu li>a:hover {
+        color: #fff
+    }
+    .outerWrap {
+        padding-top: 0
+    }
+    .sideDot {
+        right: 15px
+    }
+}
+
+@media (max-width:1023px) {
+    .bannerArea h1 {
+        margin-bottom: 10px;
+        font-size: 32px
+    }
+    .bannerArea h2 {
+        font-size: 100px
+    }
+    .workList {
+        width: 100%
+    }
+    .workList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        padding-right: 0
+    }
+    .workList li {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+        box-sizing: border-box
+    }
+    .workList .right {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center
+    }
+    .workList p {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:960px) {
+    .sideDot {
+        display: none
+    }
+    .linkList {
+        flex-wrap: wrap
+    }
+    .linkList li {
+        width: 50%
+    }
+    .linkList a {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+    .contactArea .titleBox em {
+        font-size: 60px;
+        letter-spacing: .55em
+    }
+    .caseListTop {
+        flex-wrap: wrap
+    }
+    .caseListTop .left,
+    .caseListTop .right {
+        width: 100%
+    }
+    .portfolioArea .title {
+        opacity: 1;
+        transform: translateY(0)
+    }
+    .portfolioArea .title a {
+        padding: 15px
+    }
+    .caseList.bottom li {
+        width: 50%
+    }
+}
+
+@media (max-width:767px) {
+    .bannerArea h1 {
+        font-size: 28px
+    }
+    .bannerArea h2 {
+        font-size: 82px
+    }
+    .linkList em {
+        font-size: 30px
+    }
+    .linkList h3 {
+        font-size: 15px
+    }
+    .contactArea {
+        padding-top: 0
+    }
+    .contactArea .wrap {
+        padding-left: 25px;
+        padding-right: 25px
+    }
+    .contactArea .wrap:after {
+        width: 100%;
+        border-radius: 0
+    }
+    .contactArea .topBox {
+        margin-top: 25px
+    }
+    .contactArea .titleBox em {
+        font-size: 46px;
+        letter-spacing: .2em
+    }
+    .contactArea .titleBox h2 {
+        font-size: 24px;
+        letter-spacing: .2em
+    }
+    .bannerCopyright {
+        display: none
+    }
+}
+
+@media (max-width:640px) {
+    .bannerArea h1 {
+        font-size: 25px
+    }
+    .bannerArea h2 {
+        font-size: 65px
+    }
+    .bannerArea h3 {
+        font-size: 13px;
+        letter-spacing: .05em
+    }
+    .caseList li,
+    .caseListTop .left {
+        padding: 2px
+    }
+    .portfolioArea .title a {
+        font-size: 13px;
+        padding: 10px
+    }
+}
+
+@media (max-width:540px) {
+    .aboutArea .titleBox,
+    .workEduArea .titleBox,
+    .portfolioArea .titleBox {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .aboutArea .bottomBox > div.avatar,
+    .aboutArea .bottomBox > div.intro {
+        flex: 0 0 100%;
+        min-width: 100%;
+        padding: 0;
+    }
+    .aboutArea .bottomBox > div.avatar {
+        text-align: center;
+    }
+    .aboutArea .bottomBox > div.avatar > img {
+        max-width: 50%;
+    }
+    .aboutArea .bottomBox > div.intro {
+        margin-top: 10px;
+    }
+    .workList li {
+        width: 100%;
+        padding: 0
+    }
+    .portfolioArea .btn03 a {
+        font-size: 12px;
+        padding: 12px
+    }
+}
+
+@media (max-width:480px) {
+    .bannerArea h1 {
+        font-size: 22px
+    }
+    .bannerArea h2 {
+        font-size: 60px
+    }
+    .linkList li {
+        width: 100%
+    }
+    .linkList li:nth-child(even) a {
+        box-shadow: 0px 5px 50px 0px rgba(98, 98, 98, 0.08)
+    }
+    .aboutArea {
+        padding-bottom: 50px
+    }
+    .workEduArea .bottom {
+        padding-bottom: 0
+    }
+}
