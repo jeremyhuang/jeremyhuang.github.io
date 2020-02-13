@@ -971,6 +971,16 @@ footer:before {
     padding-left: 40px;
 }
 
+.aboutArea .bottomBox > div.intro > h3,
+.aboutArea .bottomBox > div.intro > h4 {
+    display: inline-block;
+}
+
+.aboutArea .bottomBox > div.intro > h4:before {
+    content: "/";
+    margin: 0 10px;
+}
+
 .aboutArea .btn01 {
     text-align: center
 }
@@ -1016,11 +1026,12 @@ footer:before {
     padding-right: 30px
 }
 
-.workList li {
+.workList > li {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: start;
     padding-bottom: 10px;
-    margin-bottom: 10px
+    margin-bottom: 20px
 }
 
 .workList li:nth-child(odd) .Img {
@@ -1054,6 +1065,38 @@ footer:before {
 .workList .right {
     padding-left: 20px;
     box-sizing: border-box
+}
+
+.workList .right li {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.workList .right li:before {
+    font: normal normal normal 15px/1 FontAwesome;
+    padding: 0 5px 0 0;
+}
+
+.workList .right ul.award li:before {
+    content: '\f091';
+}
+
+.workList .right ul.camera li:before {
+    content: '\f030';
+}
+
+.workList .right ul li.android:before {
+    content: '\f17b';
+}
+
+.workList .right ul li.web:before {
+    content: '\f2d0';
+}
+
+.workList .right ul li.iot:before {
+    content: '\f0c2';
 }
 
 .workList h3,
@@ -1415,6 +1458,12 @@ footer {
         flex-wrap: wrap;
         margin-bottom: 30px;
         padding-right: 0
+    }
+    .workList .right ul {
+        text-align: left;
+    }
+    .workList .right ul > li {
+        width: 100%;
     }
     .workList li {
         flex-direction: column;
