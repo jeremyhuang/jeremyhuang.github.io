@@ -377,8 +377,6 @@
                     $('html,body').animate({
                         scrollTop: $($(this).data('target')).offset().top
                     }, 'show');
-
-                    console.log();
                  });
              });
 
@@ -394,8 +392,6 @@
                     $('html,body').animate({
                         scrollTop: $($(this).data('target')).offset().top
                     }, 'show');
-
-                    console.log();
                  });
              });
         });
@@ -488,7 +484,6 @@
                 var url = $(this)[0].url == null ? "#" : $(this)[0].url;
                 var title = $(this)[0].title;
                 var mainImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : $(this)[0].mainImg;
-                console.log($(this)[0].mainImg);
 
                 html += 
                     "<li>" + 
@@ -515,17 +510,20 @@
             }
         }
 
-        $('.portfolioArea .type > p').click(function() {
+        $('.portfolioArea .type > p').on('click', function(e) {
+            e.stopPropagation();
             if($(this).hasClass('select')) {
-                $(this).removeClass('select');
+                // $(this).removeClass('select');
                 var type = $(this).data('type');
                 var index = $.inArray(type, selectType);
                 selectType.splice(index, 1);
+                console.log('hi');
             } else {
-                $(this).addClass('select');
+                // $(this).addClass('select');
                 selectType.push($(this).data('type'));
             }
 
+            $(this).toggleClass('select');
             filterWorksData();
         });
 

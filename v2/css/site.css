@@ -1165,11 +1165,18 @@ footer:before {
     content: '\f17a';
 }
 
-.portfolioArea .type > p:hover,
 .portfolioArea .type > p.select {
     color: white;
     font-weight: bold;
     background: linear-gradient(to right,#ec3849 0,#f35844 100%);
+}
+
+@media (min-width:1181px) {
+    .portfolioArea .type > p:hover {
+        color: white;
+        font-weight: bold;
+        background: linear-gradient(to right,#ec3849 0,#f35844 100%);
+    }
 }
 
 .portfolioArea .wrap {
