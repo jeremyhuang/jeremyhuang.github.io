@@ -1123,6 +1123,55 @@ footer:before {
     background-color: #fff;
 }
 
+.portfolioArea .type {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.portfolioArea .type > p {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 50px;
+    min-width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.portfolioArea .type > p:before {
+    font: normal normal normal 18px/1 FontAwesome;
+    padding: 0 5px 0 0;
+}
+
+.portfolioArea .type > p.android:before {
+    content: '\f17b';
+}
+
+.portfolioArea .type > p.ios:before {
+    content: '\f179';
+}
+
+.portfolioArea .type > p.web:before {
+    content: '\f2d0';
+}
+
+.portfolioArea .type > p.wordpress:before {
+    content: '\f19a';
+}
+
+.portfolioArea .type > p.winform:before {
+    content: '\f17a';
+}
+
+.portfolioArea .type > p:hover,
+.portfolioArea .type > p.select {
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right,#ec3849 0,#f35844 100%);
+}
+
 .portfolioArea .wrap {
     width: 80%;
     padding: 0
@@ -1176,7 +1225,7 @@ footer:before {
 
 .portfolioArea .title a {
     display: block;
-    padding: 15px 40px;
+    padding: 15px 20px;
     font-weight: 300;
     font-size: 16px;
     color: #fff;

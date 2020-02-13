@@ -1,0 +1,450 @@
+{
+	"works": [
+		{
+			"id": 37,
+			"year": 2019,
+			"type": "android",
+			"title": "Asia Value Capital",
+			"description": "我們看到很多再投資(re-investment)的挑戰，在亞洲又特別嚴重。很多投資者因為市場的波動或將資產交托給錯誤的團隊，而正在失去大量的財富。我們相信我們可以做一些事情來改變這個現狀，讓社會的財富變得更有力量及意義。 我們希望能重新定義亞洲財富管理的工作，讓財富能創造更大的力量與更美好的價值。",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=fund.avc.client&hl=zh-TW",
+			"relatedUrl": null
+		},
+		{
+			"id": 36,
+			"year": 2019,
+			"type": "web",
+			"title": "君綺醫美診所",
+			"description": "上帝創造女人讓世界更美麗，君綺醫美打造讓女人變美麗的天堂。君綺診所讓您寵愛自己享受美麗的銳變，時時刻刻愛惜自己。",
+			"mainImg": "images/portfolio/portfolio_main_36.png",
+			"imgs": null,
+			"url": "https://www.jing-chi.com.tw/",
+			"relatedUrl": null
+		},
+		{
+			"id": 35,
+			"year": 2018,
+			"type": "web",
+			"title": "故宮藝術影音教育平台",
+			"description": "以「故宮教育頻道」影音資源為核心，採用Interactive Video 技術製作自主管理功能，配合系統分析(System Analysis)概念，建立符合中小學老師、學生、以及博物館教育工作者需要之博物館與學校共同、共教、共學的影音教學平台。",
+			"mainImg": "images/portfolio/portfolio_main_35.png",
+			"imgs": null,
+			"url": "http://ipalace.npm.edu.tw/",
+			"relatedUrl": null
+		},
+		{
+			"id": 34,
+			"year": 2018,
+			"type": "web",
+			"title": "故宮教育頻道",
+			"description": "國立故宮博物院作為世界指標型博物館，為豐富競速時代的數位內容與創新應用服務，擬以「故宮教育頻道 iPalace Channel」為基礎，發展為本院及博物館、學校共用之影音串流平台，根據使用者經驗、閱聽數據分析，持續優化系統；整合其他機構資源，打造以影音為主軸、寓教於樂、功能個人化、連結師生藝術教育需求與本院資源，並運用串流媒體提升觀看效能，同時減輕硬碟儲存空間負擔，以符合未來博物館社教功能需求的博物館雲端藝術教育平台，並提供中小學影音導向藝術教育雲化服務；配合學校教案、教學指引應用並調整內容，推動雲端化整合學習，達到有效智慧學習，以減少城鄉數位文化落差。",
+			"mainImg": "images/portfolio/portfolio_main_34.png",
+			"imgs": null,
+			"url": "http://ipalace.npm.edu.tw/Art",
+			"relatedUrl": null
+		},
+		{
+			"id": 33,
+			"year": 2018,
+			"type": "winform",
+			"title": "SiPass 訪客門禁系統",
+			"description": "串接西門子SiPass系統，動態產出QR-Code門禁卡並以出單機輸出。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 32,
+			"year": 2018,
+			"type": "web",
+			"title": "HiNet色情守門員 響應愛心計畫",
+			"description": "台灣許多失去原生家庭嬰幼兒，常面臨水果資源的問題，本活動與無毒農共同合作，捐助無毒安全的水果給育幼院孩子，讓等家的寶寶們健康、安心的長大。",
+			"mainImg": "images/portfolio/portfolio_main_32.png",
+			"imgs": null,
+			"url": "https://hicare.hinet.net/babychildren/",
+			"relatedUrl": null
+		},
+		{
+			"id": 31,
+			"year": 2018,
+			"type": "web",
+			"title": "新北市政府教育局 能源教育平台",
+			"description": "「能源管理」數位教育平台，透過開放的能源管理新知、活動，讓能源管理專業人才及有志投身能源管理領域者，可獲知國內外相關資訊，加強知識的汲取與應用；同時，也提供個人化及效能化的網路學習環境，依不同的學習情境和學習者的程度，規劃適切的線上學習內容，與傳統人才培訓方式互補，提升整體學習成效；此外，打造學習者交流分享園地及建構能管員登記管理機制，期許能源管理學習平台發揮最大功效，以提供多元完善的服務。",
+			"mainImg": "images/portfolio/portfolio_main_31.png",
+			"imgs": null,
+			"url": "https://ecloud.ntpc.edu.tw/",
+			"relatedUrl": null
+		},
+		{
+			"id": 30,
+			"year": 2018,
+			"type": "web",
+			"title": "夏日足球夢",
+			"description": "世足16強全面開打，球迷們快來參加華視「夏日足球夢」！參與長傳訓練、守門訓練、射門訓練，在這個熱血的夏天，跟你最愛的C羅、梅西、內馬爾一起完成你的「夏日足球夢」吧！",
+			"mainImg": "images/portfolio/portfolio_main_30.png",
+			"imgs": null,
+			"url": "https://event.cts.com.tw/2018FIFA/soccer/",
+			"relatedUrl": null
+		},
+		{
+			"id": 29,
+			"year": 2018,
+			"type": "web",
+			"title": "HiSoPets 寵物雲社交平台",
+			"description": "HiSoPets 最新潮的寵物app，HiSoPets 帶來了寵物app最新潮的功能。&lt;ul&gt;&lt;li&gt;熱門牆面&lt;br&gt;有趣又好用的社群網站功能，透過圖片與影片的貼文互動，與世界分享您與您的毛寶貝甜蜜生活，快來幫自己的毛小孩創立專屬的生活頻道吧！&lt;/li&gt;&lt;li&gt;附近資訊&lt;br&gt;搭配google地圖，提供您附近的寵物景點及餐廳、寵物用品店、寵物醫院、寵物美容院，滿足您與毛寶貝的所有需求。&lt;/li&gt;&lt;li&gt;寵物知識&lt;br&gt;提供專業性質的知識文章、有趣的寵物主題電影、與寵物相關的藝文介紹，輕鬆了解更多寵物世界！&lt;/li&gt;&lt;li&gt;生活風格&lt;br&gt;知識週、藝文週、公益週，每週不同的主題，每週提供您有趣的生活資訊！&lt;/li&gt;&lt;li&gt;個人專區&lt;br&gt;為自己及毛寶貝建立一個專屬的個人專區，透過活動可以累積點數進行遊戲，免費換取超值好禮喔！&lt;/li&gt;&lt;/ul&gt;",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://www.facebook.com/HiSoPetsapp/",
+			"relatedUrl": null
+		},
+		{
+			"id": 28,
+			"year": 2018,
+			"type": "web",
+			"title": "hiHosting",
+			"description": "hiHosting企業網路架站，小空間大空間一手包辦，業務蓬勃發展好放心。",
+			"mainImg": "images/portfolio/portfolio_main_28.png",
+			"imgs": null,
+			"url": "https://www.hihosting.hinet.net/",
+			"relatedUrl": null
+		},
+		{
+			"id": 27,
+			"year": 2018,
+			"type": "android",
+			"title": "QRacing",
+			"description": "Qstarz QRacing APP是一個賽車計時分析應用程式。主要是連接使用於Qstarz 10Hz BLE GPS裝置，支援影片錄製和將影片結合軌跡資料。主要功能特點如下：&lt;ol&gt;&lt;li&gt;為賽車計時開發，可應用於圈賽和直線計時&lt;/li&gt;&lt;li&gt;單圈計時比較和圖表分析&lt;/li&gt;&lt;li&gt;支援影片錄製並將軌跡資料結合影片&lt;/li&gt;&lt;li&gt;單圈/分段/區段即時時間差比較&lt;/li&gt;&lt;li&gt;強大的各種賽車分析數據&lt;/li&gt;&lt;li&gt;自動偵測全球賽道&lt;/li&gt;&lt;li&gt;賽車計時歷史成績列表與支援記錄播放&lt;/li&gt;&lt;li&gt;賽事場次數據匯出CSV格式&lt;/li&gt;&lt;li&gt;車手資料和帳號管理&lt;/li&gt;&lt;/ol&gt;",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=com.qstarz.qracing",
+			"relatedUrl": null
+		},
+		{
+			"id": 26,
+			"year": 2018,
+			"type": "android",
+			"title": "金鐘53",
+			"description": "第53屆金鐘獎官方應用程式由三立電視，力新國際科技共同合作開發，並由工研院資通所技術指導。透過第53屆金鐘獎官方應用程式您將可以第一手接收到入圍與得獎的最新訊息，並且提供頒獎典禮即時網路影音串流直播的服務，讓您不在電視機前也可以同步收看金鐘典禮的各項精彩表演。",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=tv.droptv.goldenbell",
+			"relatedUrl": null
+		},
+		{
+			"id": 25,
+			"year": 2018,
+			"type": "android",
+			"title": "魔髮部屋",
+			"description": "《魔髮部屋 髮型模擬器》想變換髮型，卻不知道是否適合自己？魔髮部屋髮型模擬器，針對不同臉型模擬，幫助您找出最適合自己的髮型。",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=com.ebsuccess.magichair.activity",
+			"relatedUrl": null
+		},
+		{
+			"id": 24,
+			"year": 2017,
+			"type": "web",
+			"title": "HiNet 遊戲加速器",
+			"description": "「HiNet遊戲加速器」結合中華電信低延遲的直達海纜電路以及wtfast獨門加速演算法，提供玩家在國外對戰時擁有最優之連線品質，它將是您的神隊友，讓您決戰境外，毫秒間KO對手，為國爭光！",
+			"mainImg": "images/portfolio/portfolio_main_24.png",
+			"imgs": null,
+			"url": "https://gamebooster.hinet.net/",
+			"relatedUrl": null
+		},
+		{
+			"id": 23,
+			"year": 2017,
+			"type": "web",
+			"title": "hicloud 雲端服務",
+			"description": "中華電信近年來持續在先進的雲端服務與技術上大量投資，從2010年起，已陸續推出一系列商 用的hicloud雲端服務，包含hicloud CaaS 雲運算、hicloud VPC 虛擬私雲、hicloud PaaS 雲創平 台(專案提供)、hicloud Boxe資料櫃以及 hicloud S3雲儲存等高性能、低成本的服務，並考量客戶 支出與資源調度需求，提供Pay as you go(用多少付多少)與Pay as you grow(成長多少才添購 多少)的高彈性運用與擴充機制。未來將有hicloud Desk 桌面雲、hicloud Render 雲算圖、雲端資 安、雲端系統軟體 CHT Virtuoso 以及私有儲存雲等服務陸續推出，及早因應雲端世代企業即將產 生的全新需求。",
+			"mainImg": "images/portfolio/portfolio_main_23.png",
+			"imgs": null,
+			"url": "http://hicloud.hinet.net/",
+			"relatedUrl": null
+		},
+		{
+			"id": 22,
+			"year": 2017,
+			"type": "web",
+			"title": "我未來的有錢程度會像誰",
+			"description": "配合活動，撰寫互動遊戲，並分享至Facebook。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 21,
+			"year": 2017,
+			"type": "web",
+			"title": "力新國際行動版",
+			"description": "以領先的技術、熱忱的服務和不斷創新研發為經營理念的力新國際，多年來致力於研發自有核心技術，包括數位影像文件管理、智能聯網應用、辦公室自動化及雲端整合等，為客戶提供完整的軟硬體解決方案，持續扮演企業最佳合作夥伴。近年更積極跨入行動應用、雲端運算、校園數位化與社群行銷服務等領域，與優質產業夥伴合作，提供跨國整合服務，並關注巨量資料分析、數位內容新應用及雲端軟體即服務(SaaS)，以提供使用者簡易、便捷與更符合生活和工作所需的智慧軟體，發展朝向 (1)個人應用解決方案、(2)企業雲端與行動整合方案、(3)智能聯網與數位看板整合方案、(4)智慧校園解決方案、(5)行動應用與社群行銷服務、(6)加值型資訊整合服務等六大面向。",
+			"mainImg": null,
+			"imgs": null,
+			"url": "http://m.newsoft.com.tw",
+			"relatedUrl": null
+		},
+		{
+			"id": 20,
+			"year": 2017,
+			"type": "web",
+			"title": "捌圓餐飲",
+			"description": "捌圓餐飲乃台灣在地餐飲公司，聚集了食材盤商、餐廳業者的專業人士共同創立，捌字取自台語的發音 bat，意思為\"認識、明白、了解\"，捌圓餐飲核心價值在於，引領每位消費者了解食材、享受食材。每個來用餐的客人，都能相信捌圓的品質把關，安心享用由捌圓嚴格挑選的美味食材，更因是餐飲服務業，處事圓融、八面圓通更是捌圓餐飲的最高指導原則，讓每位用餐的客人皆能享受到美味的食材、貼心的服務，每一次的用餐都能圓滿。",
+			"mainImg": "images/portfolio/portfolio_main_20.png",
+			"imgs": null,
+			"url": "http://ba-yuan.com",
+			"relatedUrl": null
+		},
+		{
+			"id": 19,
+			"year": 2017,
+			"type": "android",
+			"title": "金鐘52",
+			"description": "第52屆金鐘獎頒獎典禮以「新聲代 新視代」為主題，期待打造不同視聽饗宴，為此注入新能量與新價值。2017年，專精智慧物聯網軟硬整合領域的力新國際，與三立電視共同開發的「金鐘52 App」，將直播星光大道、典禮內容，同時可選擇喜歡的場景、視角觀賞典禮流程。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 18,
+			"year": 2017,
+			"type": "android",
+			"title": "e-Signage S Player",
+			"description": "e-Signage S Player 為日本 Sharp 數位看板之播放軟體，除顯示用戶預定排程的節目（影片、圖片、跑馬燈）外，還能提供緊急事件插播，遠端控制等等功能。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": [
+				{
+					"title":"e-Signage ＜デジタルサイネージソフト＞",
+					"url":"https://jp.sharp/business/lcd-display/lineup/e-signage/"
+				}
+			]
+		},
+		{
+			"id": 17,
+			"year": 2016,
+			"type": "web",
+			"title": "天主教台北總教區教理推廣中心",
+			"description": "台北總教區教理推廣中心成立於1986年，宗旨在協助堂區的主日學教育及教理老師的養成。本中心為教理老師所舉辦的講習包括：兒童、青少年、成人教理講授與聖事準備、成人教理進修、靈修培育、成人入門聖事等。教理老師們所學習的是「全人教理講授五步驟」教學法，配以黑板畫圖、絨布板故事、視聽教具，並加入祈禱禮儀、聖歌、宗教美勞、信仰遊戲，以及團體活動等。教理師資培訓及編印講授教材外，本中心也提供兒童、青少年的夏令營以及成人避靜活動。",
+			"mainImg": "images/portfolio/portfolio_main_17.png",
+			"imgs": null,
+			"url": "http://www.zhuyesu.org/",
+			"relatedUrl": null
+		},
+		{
+			"id": 16,
+			"year": 2016,
+			"type": "android",
+			"title": "RV-8000 車載安卓影音導航主機",
+			"description": "未上架專案",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 15,
+			"year": 2016,
+			"type": "android",
+			"title": "金鐘51",
+			"description": "第51屆金鐘獎主軸為「新媒體 新視代」，由三立電視與工研院資通所DropTV團隊共同合作開發「金鐘51 App」，透過工研院資通所提供抓金鐘跨螢互動服務，串連金鐘入圍頻道進行多頻道跨螢互動行銷活動，並同步整合360直播及VR虛擬實境等新媒體技術應用。",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=tv.droptv.goldenbell&hl=zh_TW",
+			"relatedUrl": null
+		},
+		{
+			"id": 14,
+			"year": 2016,
+			"type": "android",
+			"title": "G's VIEW 集視直播主",
+			"description": "集視平台供直播主播手機移動直播所使用的 app，隨時隨地都可以開始直播。拿出手機，隨手直播。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": [
+				{
+					"title":"集視主站 - G's VIEW",
+					"url":"https://www.gsview.tv/"
+				},
+				{
+					"title":"直播也能做權限控管　工研院開拓直播新藍海",
+					"url":"https://tw.news.yahoo.com/%E7%9B%B4%E6%92%AD%E4%B9%9F%E8%83%BD%E5%81%9A%E6%AC%8A%E9%99%90%E6%8E%A7%E7%AE%A1-%E5%B7%A5%E7%A0%94%E9%99%A2%E9%96%8B%E6%8B%93%E7%9B%B4%E6%92%AD%E6%96%B0%E8%97%8D%E6%B5%B7-111210190.html"
+				}
+			]
+		},
+		{
+			"id": 13,
+			"year": 2016,
+			"type": "android",
+			"title": "BisChat企業即時通",
+			"description": "即時通是一套搭配力新國際推所出的EIP、OA等系統的APP，提供即時訊息和自訂貼圖的接收與發送，達成最迅速的溝通。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 12,
+			"year": 2015,
+			"type": "web",
+			"title": "鹿堂國際有限公司",
+			"description": "養生觀念，在目前生活壓力龐大的台灣社會裡，已經漸漸被人所注重，而要做到養生，就要從飲食起居開始，而鹿堂所要做的就是全面的養生服務，而如今現階段，二仙寶就是鹿堂養生事業的開始。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 11,
+			"year": 2015,
+			"type": "android",
+			"title": "e記帳",
+			"description": "本App結合電子發票與記帳功能，透過掃描發票或載具匯入擷取消費明細的方法省去消費者自行輸入明細的麻煩。本App更將儲蓄與社群網站結合，增加了成就榜功能，讓記帳、儲蓄不再是煩悶乏味的一件事情，透過與朋友間的互動讓記帳變成是一件很有趣的事，進而養成儲蓄的習慣。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": [
+				{
+					"title":"我不是文青，我是《藝文控》！- 藝文情報即時放送",
+					"url":"http://3c.technews.tw/2015/05/28/culture-activity/"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"year": 2015,
+			"type": "android",
+			"title": "藝文控",
+			"description": "藝文控! 是一個免費、無廣告的藝文資訊App。這裡包含了全台各縣市的所有藝術文化資訊，你想知道的藝文資訊通通可以在這裡找到！ 讓我們一起成為個藝文控吧！&lt;br&gt;功能特色&lt;ol&gt;&lt;li&gt;資料由文化部開放資料平台提供&lt;/li&gt;&lt;li&gt;可設定所在縣市，查詢該縣市活動&lt;/li&gt;&lt;li&gt;可設置喜好參數，迅速推薦您所喜愛的活動&lt;/li&gt;&lt;li&gt;周邊活動快搜，隨時掌握附近的藝文訊息&lt;/li&gt;&lt;li&gt;可以透過Facebook分享活動資訊，邀請朋友一起參與活動&lt;/li&gt;&lt;/ol&gt;",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": [
+				{
+					"title":"我不是文青，我是《藝文控》！- 藝文情報即時放送",
+					"url":"http://3c.technews.tw/2015/05/28/culture-activity/"
+				}
+			]
+		},
+		{
+			"id": 9,
+			"year": 2015,
+			"type": "android",
+			"title": "美麗人身",
+			"description": "美麗人身Lite HD－妳的時尚更衣室，萬種造型任妳穿搭！<br>內建五十組模版，走到哪拍到哪，櫥窗、雜誌上的衣服與布花輕鬆穿上身！ 快下載【美麗人身Lite HD】，免費體驗時尚圈最酷最有趣的玩美穿搭！【美麗人身Lite HD】打造專屬妳的時尚試衣間，品牌服飾通通收藏。變裝快速又時尚，輕鬆搭配出各種造型風格，我就是時尚女模王！",
+			"mainImg": null,
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=com.beautimode.beautifulfigure",
+			"relatedUrl": [
+				{
+					"title": "虛擬試衣APP─「美麗人身Lite」正式上線",
+					"url": "https://www.hot3c.com/read.asp?class=20&id=23323"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"year": 2015,
+			"type": "android",
+			"title": "泡泡茶",
+			"description": "影音直播多媒體社群平台，未上架之專案",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 7,
+			"year": 2015,
+			"type": "android",
+			"title": "ANYPost網路化數位看板",
+			"description": "ANYPost是一套全新的數位看板網路內容發佈系統，全網路化的介面，讓使用者不需安裝任何軟體，就可以直接上網使用。例如將部門同仁行程即時轉至大型面板上方便主管等參考，或者將工廠的專案進度同步顯示，達到看板管理功效。",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 6,
+			"year": 2014,
+			"type": "wordpress",
+			"title": "許傑,旅行圖中",
+			"description": "許傑，是個誕生於1990年的水瓶座男生，喜歡用天馬行空的想法去實行生活，也熱愛寶可夢。而旅行是我生活中最重要的小事。從18歲那年自己許下的目標，要帶著相機拍下全台灣368個鄉鎮風光，以一圖一故事傳遞出這些地方的故事。持續深入台灣各鄉鎮找尋最真實的感動，用我的方式及腳步去記錄台灣，期許能拍出有溫度的作品，並將旅行中的故事，最後透過影像與文字的呈現在部落格傳遞出來，讓大家看見不同的台灣。&lt;br&gt;現在，用旅居的方式走出台灣，擴展到亞洲地區的幾個國家，旅居過日本京都兩個月、九州別府一個月；也在北京落腳過三週的生活；最遠飛過土耳其、訪過南半球的達爾文，也去了零下三十三度的「新疆」拜訪遊牧民族。旅行中，我看見了美好與不美好的一面，我喜歡分享屬於美好的層面。",
+			"mainImg": "images/portfolio/portfolio_main_6.png",
+			"imgs": null,
+			"url": "http://journey.tw/",
+			"relatedUrl": null
+		},
+		{
+			"id": 5,
+			"year": 2014,
+			"type": "web",
+			"title": "中華電信 UCAMpro",
+			"description": "類比與數位攝影機的監控解決方案，汰換監控系統的設備總是麻煩又昂貴，UCAMpro同時支援類比與網路攝影機，利用我們的DVS轉換成數位訊號，讓你不需放棄舊有的類比設備就能升級雲端監控系統。",
+			"mainImg": "images/portfolio/portfolio_main_5.png",
+			"imgs": null,
+			"url": "http://www.ucampro.com/",
+			"relatedUrl": null
+		},
+		{
+			"id": 4,
+			"year": 2014,
+			"type": "web",
+			"title": "媛の膳",
+			"description": "【媛之膳】品牌概念源自於女生本該好好『膳』待自己，在追求美味的同時，也要兼顧健康與安全。&lt;br&gt;因此，媛之膳希望在女性生理調養方面，發展出簡單、輕鬆、無負擔的基礎膳食保養。",
+			"mainImg": "images/portfolio/portfolio_main_4.png",
+			"imgs": null,
+			"url": "https://www.ladysense.com.tw/",
+			"relatedUrl": null
+		},
+		{
+			"id": 3,
+			"year": 2013,
+			"type": "web",
+			"title": "夜行刺青",
+			"description": "夜行刺青一家的生活態度，我們都是刺青狂熱份子，用刺青和生活寫下我們的人生！",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": null
+		},
+		{
+			"id": 2,
+			"year": 2011,
+			"type": "android",
+			"title": "可利智碼 SwiTune隨意通",
+			"description": "SwiTune隨意通多媒體內容服務平台，是可利智碼行動科技股份有限公司自行研發的門店行銷及內容服務平台，不論你是新成立的餐廳還是連鎖通路，都可以藉由SwiTune平台增加來客量及銷售額，並可進一步探索消費者的內容喜好,協助你瞭解你的客戶！",
+			"mainImg": null,
+			"imgs": null,
+			"url": null,
+			"relatedUrl": [
+				{
+					"title":"【Meet創業之星】地點限定 SwiTune用wi-fi創建全新影音體驗",
+					"url":"https://www.bnext.com.tw/article/24977/BN-ARTICLE-24977"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"year": 2011,
+			"type": "ios",
+			"title": "抗癌秘笈：銀髮族癌症衛教 iPad電子書",
+			"description": "這本電子書的設計與製作，選定高齡族群切身關注的重要議題：癌症衛教。本書內容涵蓋認識癌症、癌症的預防到面對癌症的處理和心態三個均等極為重要的部分。然而癌症並不是只有高齡者才有機會得到，期望這本電子書的出版能協助更多閱聽者認識癌症，進而預防癌症、遠離癌症。&lt;br&gt;此電子書分為三部分「認識癌症 」、「癌症的預防」、「面對癌症」&lt;ol&gt;&lt;li&gt;每篇章節內容將專業知識口語化、生活化。&lt;/li&gt;&lt;li&gt;邀請專業醫護人員親自錄製影片進行解說。&lt;/li&gt;&lt;li&gt;每頁設計語音自動播放及簡單容易操作的互動設計。&lt;/li&gt;&lt;li&gt;親切溫暖的插圖，讓閱聽者感覺舒適親切。&lt;/li&gt;&lt;li&gt;彙整癌症相關資源的網址連結，方便閱聽者更快速搜尋相關資訊。&lt;/li&gt;&lt;/ol&gt;",
+			"mainImg": "images/portfolio/portfolio_main_1.png",
+			"imgs": null,
+			"url": "https://apps.apple.com/tw/app/%E6%8A%97%E7%99%8C%E7%A7%98%E7%AC%88-%E9%8A%80%E9%AB%AE%E6%97%8F%E7%99%8C%E7%97%87%E8%A1%9B%E6%95%99/id584303275",
+			"relatedUrl": [
+				{
+					"title": "數位出版原創作品誕生 2012電子書創作大賽 頒獎典禮",
+					"url": "https://www.moc.gov.tw/information_250_23149.html"
+				}
+			]
+		}
+	]
+}
