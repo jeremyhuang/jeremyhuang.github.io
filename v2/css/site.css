@@ -136,10 +136,54 @@ header.targetBtn {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03)
 }
 
+header.targetBtn .menu li {
+    position: relative;
+    padding: 0 10px;
+}
+
 header.targetBtn .menu li .link {
     padding: 30px 15px;
     color: #1b1b1b
 }
+
+header.targetBtn .menu li i.num {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #fff;
+    color: #ec1d4e;
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    line-height: 23px;
+    top: 12px;
+    right: -5px;
+}
+
+header.targetBtn .menu li i.num:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 0 7px;
+    border-color: transparent transparent transparent #fff;
+}
+
+header.targetBtn.sticky .menu li i.num {
+    background: #ec1d4e;
+    color: #FFF;
+    transform: all .5s;
+}
+
+header.targetBtn.sticky .menu li i.num:before {
+    border-color: transparent transparent transparent #ec1d4d;
+    transform: all .5s;
+}
+
 
 header.targetBtn .menuBtn:before,
 header.targetBtn .menuBtn:after {
@@ -1194,6 +1238,19 @@ footer:before {
     box-sizing: border-box
 }
 
+.caseList li {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.caseList li.hide {
+    opacity: 0;
+    width: 0 !important;
+    padding: 0;
+    margin: 0;
+    transition: all .5s;
+}
+
 .portfolioArea .item {
     position: relative
 }
@@ -1429,6 +1486,197 @@ footer {
     color: gray;
 }
 
+.formList{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding-bottom:40px
+}
+.formList>li{
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    width:calc(33.333% - 25px);
+    margin-bottom:10px;
+    font-size:15px;
+    color:#757575;
+    letter-spacing:.075em
+}
+.formList>li.full,.formList>li.fullDate{
+    width:100%
+}
+.formList>li.textLi{
+    margin-bottom:20px
+}
+.formList>li.textLi .title.current{
+    top:-10px
+}
+.formList>li:last-child{
+    align-items:center;
+    flex-wrap:nowrap;
+    justify-content:center;
+}
+.formList .itemBox{
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    width:100%;
+    height:45px;
+    margin-bottom:10px;
+    margin-top:5px
+}
+.formList .inputBox{
+    height:auto
+}
+.formList .title{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    color:#aaa;
+    pointer-events:none;
+    transition:all .4s ease-in-out
+}
+.formList .title.current{
+    top:0;
+    font-size:12px
+}
+.formList .title.opacity{
+    opacity:0
+}
+.formList .title2{
+    width:100%;
+    margin-bottom:15px;
+    color:#717171
+}
+.formList .left{
+    position:relative;
+    flex:1
+}
+.formList .right{
+    position:relative
+}
+.formList .inText,.formList .inSelect{
+    width:100%;
+    height:45px;
+    border:none;
+    border-radius:0;
+    border-bottom:1px solid #c8c8c8;
+    letter-spacing:.05em;
+    box-sizing:border-box;
+    font-family:Helvetica,Arial,"微軟正黑體",Heiti TC,"メイリオ",sans-serif;
+    font-size:15px
+}
+.formList .inText:focus,.formList .inSelect:focus{
+    outline:none
+}
+.formList .error{
+    border-bottom-color:red
+}
+.formList .inSelect{
+    color:#aaa
+}
+.formList .inSelect option{
+    color:#000
+}
+.formList .sexBox{
+    padding-left:18px;
+    box-sizing:border-box
+}
+.formList .leftItem,.formList .rightItem{
+    display:flex;
+    align-items:center
+}
+.formList #data_exp {
+    height: auto;
+}
+.radioSet{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%
+}
+.radioSet>li{
+    margin-bottom:12px
+}
+.radioSet .full{
+    display:flex;
+    align-items:center;
+    width:100%
+}
+.radioSet .full .checkbox{
+    margin-right:0
+}
+.radioSet .right{
+    width:100%;
+    margin-left:0
+}
+.radioSet .checkbox{
+    margin-right:15px
+}
+.radioSet .checkbox span{
+    margin-right:12px
+}
+.submitBtn a{
+    display:inline-block;
+    padding:0 38px;
+    height:50px;
+    line-height:50px;
+    border-radius:3px;
+    font-size:17px;
+    color:#fff;
+    letter-spacing:.2em;
+    background:linear-gradient(to right,#ed3c48 0%,#f35445 100%)
+}
+.submitBtn a:hover{
+    box-shadow:0px 3px 15.84px 0.16px rgba(79,79,79,0.25)
+}
+.radio{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    cursor:pointer
+}
+.radio input[type="radio"]{
+    position:absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none
+}
+.radio input[type="radio"]:checked+span{
+    border-color:#000;
+    background:#000
+}
+.radio input[type="radio"]:checked+span:before{
+    opacity:1
+}
+.radio span{
+    position:relative;
+    display:inline-block;
+    margin-right:5px;
+    width:20px;
+    height:20px;
+    border:1px solid #dcdcdc;
+    border-radius:50%;
+    box-sizing:border-box;
+    transition:all .5s
+}
+.radio span:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:url("../images/icon_check.svg") no-repeat center center/10px 8px;
+    opacity:0;
+    transition:all .5s
+}
+
 @media (max-width:1500px) {
     .bannerArea h2 {
         font-size: 160px
@@ -1479,6 +1727,12 @@ footer {
         padding-left: 60px;
         padding-right: 60px
     }
+    .formList>li,.formList>li.fullDate{
+        width:calc(50% - 20px)
+    }
+    .formList>li:nth-child(3) {
+        width: 100%;
+    }
 }
 
 @media (max-width:1180px) {
@@ -1495,6 +1749,15 @@ footer {
     }
     .sideDot {
         right: 15px
+    }
+    .formList>li:last-child{
+        flex-wrap:wrap
+    }
+    .formList .leftItem,.formList .rightItem{
+        width:100%
+    }
+    .formList .leftItem{
+        margin-bottom:20px
     }
 }
 
@@ -1614,6 +1877,17 @@ footer {
     .bannerCopyright {
         display: none
     }
+    .formList>li,.formList>li.fullDate{
+        width:100%
+    }
+    .formList .leftItem,.formList .rightItem{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start
+    }
+    .formList .leftItem{
+        margin-top:20px
+    }
 }
 
 @media (max-width:640px) {
@@ -1687,5 +1961,19 @@ footer {
     }
     .workEduArea .bottom {
         padding-bottom: 0
+    }
+}
+
+@media (max-width: 440px) {
+    .formList .left,.formList .right{
+        width:100%
+    }
+    .formList .left{
+        margin-bottom:25px
+    }
+    .formList .itemBox{
+        flex-direction:column;
+        height:auto;
+        min-height:45px
     }
 }

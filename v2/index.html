@@ -14,6 +14,7 @@
     <meta property="og:type" content="website" />
     <link href="css/site.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery.modal.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         <header class="targetBtn sticky">
             <div class="wrap">
                 <!-- wrap -->
-                <div class="logo"><a href="https://www.jeremyhuang.com/" title="Jeremy Huang">Jeremy Huang</a></div>
+                <div class="logo"><a href="./" title="Jeremy Huang">Jeremy Huang</a></div>
                 <a class="menuBtn"><span></span></a>
                 <nav class="menuBox">
                     <!--menuBox-->
@@ -35,6 +36,7 @@
                             <a itemprop="url" href="#workandedu" class="link" data-target="#workandedu">工作暨學習經歷</a>
                         </li>
                         <li itemprop="name">
+                            <i class="num"></i>
                             <a itemprop="url" href="#portfolio" class="link" data-target="#portfolio">作品集</a>
                         </li>
                         <li itemprop="name">
@@ -210,6 +212,7 @@
                 </ul>
             </div>
             <!-- wrap end -->
+            <div id="portfolioModal"></div>
         </section>
         <div class="contactOuterBox">
             <!-- contactOuterBox -->
@@ -226,16 +229,10 @@
                         <!-- titleBox end -->
                         <div class="Txt">
                             <!-- Txt -->
-                            專案合作、洽詢，可以透過以下方式聯繫：
+                            專案合作、洽詢，可以透過以下表單或是Linkedin聯繫：
                         </div>
                         <!-- Txt end -->
                         <div class="contactList">
-                            <div>
-                                <a href="mailto:a80420@gmail.com" target="_blank">
-                                    <p><i class="fa fa-5x fa-envelope"></i></p>
-                                    <p>a80420@gmail.com</p>
-                                </a>
-                            </div>
                             <div>
                                 <a href="https://tw.linkedin.com/in/jeremy-huang-0a790b70" target="_blank">
                                     <p><i class="fa fa-5x fa-linkedin-square"></i></p>
@@ -245,6 +242,58 @@
                         </div>
                     </div>
                     <!-- topBox end -->
+                    <form class="clearfix" id="service_form" name="service_form" enctype="text/plain" accept-charset="utf-8">
+                        <div class="formBox"><!-- formBox -->
+                            <ul class="formList">
+                                <li>
+                                    <div class="itemBox"><!-- itemBox -->
+                                        <div class="left">
+                                            <div class="title">姓名＊</div>
+                                            <input type="text" name="data_name" id="data_name" data-note="姓名" class="require inText inFocus">
+                                        </div>
+                                        <div class="right sexBox"><!-- right -->
+                                            <label class="radio">
+                                                <input name="data_sex" type="radio" value="0" checked="checked">
+                                                <span></span>先生
+                                            </label>
+                                            <label class="radio">
+                                                <input name="data_sex" type="radio" value="1">
+                                                <span></span>小姐
+                                            </label>
+                                        </div><!-- right end -->
+                                    </div><!-- itemBox end -->
+                                </li>
+                                <li>
+                                    <div class="itemBox"><!-- itemBox -->
+                                        <div class="title">連絡電話＊</div>
+                                        <input type="text" name="data_telephone" id="data_telephone" data-note="連絡電話" class="require inText inFocus">
+                                    </div><!-- itemBox end -->
+                                </li>
+                                <li>
+                                    <div class="itemBox"><!-- itemBox -->
+                                        <div class="title">E-MAIL＊</div>
+                                        <input type="text" name="data_email" id="data_email" data-note="E-MAIL" class="require inText inFocus">
+                                    </div><!-- itemBox end -->
+                                </li>
+                                <li class="full textLi">
+                                    <div class="title">主旨＊</div>
+                                    <textarea name="data_subject" id="data_subject" class="require inText inFocus" data-note="主旨"></textarea>
+                                </li>
+                                <li class="full textLi">
+                                    <div class="title">內文＊</div>
+                                    <textarea name="data_exp" id="data_exp" class="require inText inFocus" data-note="內文" rows="10"></textarea>
+                                </li>
+                                <li class="full">
+                                    <div class="rightItem"><!-- rightItem -->
+                                        <div class="submitBtn" id="submit_btn"><!-- submitBtn -->
+                                            <a>送出</a>
+                                        </div><!-- submitBtn end -->
+                                    </div><!-- rightItem end -->
+                                </li>
+                            </ul>
+                        </div><!-- formBox end -->
+                        <a id="mailTo"></a>
+                    </form>
                 </div>
                 <!-- wrap end -->
             </section>
@@ -267,7 +316,10 @@
         <!-- contactOuterBox end -->
     </div>
     <!-- outerWrap end -->
+
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
+    <script src="js/lazyload.min.js"></script>
     <script>
         $(function() {
             $('.scrollDown').click(function() {
@@ -470,23 +522,23 @@
     </script>
     <script>
         var jsonData;
-        var displayData;
         var selectType = ["android","ios","web","wordpress","winform"];
         $.getJSON("work.json", function(json) {
-            jsonData = json;
-            displayData = json.works;
+            jsonData = json.works;
             genWorks();
         });
 
         function genWorks() {
             var html = "";
-            $.each(displayData, function() {
+            var index = 0;
+            $.each(jsonData, function() {
+                var type = $(this)[0].type;
                 var url = $(this)[0].url == null ? "#" : $(this)[0].url;
                 var title = $(this)[0].title;
                 var mainImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : $(this)[0].mainImg;
 
                 html += 
-                    "<li>" + 
+                    "<li data-type=\""+type+"\" data-index=\""+index+"\">" + 
                     "   <div class='item'>" + 
                     "   <!--item-->" + 
                     "       <div class=\"Img\">" + 
@@ -495,12 +547,14 @@
                     "           </a>" + 
                     "       </div>" + 
                     "       <!--Img end-->" + 
-                    "       <h3 class=\"title\">" + 
+                    "       <h3 class=\"title\">" +
                     "           <a href=\""+url+"\" title=\""+title+"\" target=\"_blank\">"+title+"</a>" + 
                     "       </h3>" + 
                     "   </div>" + 
                     "   <!--item end-->" + 
                     "</li>";
+
+                index++;
             });
             $('.portfolioArea ul.caseList.bottom').html('');
             $('.portfolioArea ul.caseList.bottom').append(html);
@@ -508,35 +562,116 @@
             if (lazyLoadFn) {
                 lazyLoadFn.update();
             }
+
+            $('.portfolioArea ul.caseList.bottom li').on('click', function(e) {
+                e.preventDefault();
+                this.blur();
+                var index = $(this).data('index');
+                $('#portfolioModal').html('');
+                $('#portfolioModal').html(JSON.stringify(jsonData[index]));
+                $('#portfolioModal').modal({fadeDuration: 100});
+            })
+
+            $('header.targetBtn .menu li i.num').html(jsonData.length);
         }
 
         $('.portfolioArea .type > p').on('click', function(e) {
             e.stopPropagation();
+            
+            var type = $(this).data('type');
             if($(this).hasClass('select')) {
-                // $(this).removeClass('select');
-                var type = $(this).data('type');
-                var index = $.inArray(type, selectType);
-                selectType.splice(index, 1);
-                console.log('hi');
+                selectType.splice($.inArray(type, selectType), 1);
             } else {
-                // $(this).addClass('select');
                 selectType.push($(this).data('type'));
             }
 
+            $('.portfolioArea ul.caseList.bottom li[data-type="'+type+'"]').toggleClass('hide');
             $(this).toggleClass('select');
-            filterWorksData();
         });
+    </script>
+    <script>
+    $(function() {
+        //contact
+        $('.inFocus, .inFocusDate').focus(function() {
+            $(this).prev().addClass('current');
+        });
+        $('.inFocus').focusout(function() {
+            if($(this).val() == '' || $(this).val() == 0) {
+                $(this).prev().removeClass('current');
+            }
+        });
+        $('.inOther').focus(function() {
+            $(this).prev().addClass('opacity');
+        }).focusout(function() {
+            if($(this).val() == '') {
+                $(this).prev().removeClass('opacity');
+            }
+        });
+    });
 
-        function filterWorksData() {
-            displayData = $(jsonData.works).filter(function(i, n) {
-                return $.inArray(n.type, selectType) !== -1;
-            });
-            genWorks();
+    //檢查email格式
+    function isEmail(email){
+        if (email=="") return true;
+        reEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
+        return reEmail.test(email);
+    }
+
+    $('#submit_btn').click(function(){//必填驗證
+        var error=0;
+        var msg='';
+
+        $('#service_form input').removeClass('error');
+
+        $('.require').each(function(){
+            if($(this).val()==""){
+                $(this).addClass('error');
+                msg += '\n※' + $(this).data('note') + '欄位必填';
+                error = 1;
+            }
+        });
+        if($('#data_email').val()!=''){
+            if(! isEmail($('#data_email').val())){
+                $('#data_email').addClass('error');
+                msg += '\n※' + 'email格式錯誤';
+                error = 1;
+            }
         }
+
+        if(error==1){
+            msg="錯誤訊息:"+msg;
+            alert(msg);
+            //ga event
+            gtag('event', 'submit', {
+              'event_category' : 'error',
+              'event_label' : msg
+            });
+            return false;
+        }
+
+        var to = "a80420@gmail.com";
+        var name = $('#data_name').val();
+        var email = $('#data_email').val();
+        var tel = $('#data_telephone').val();
+        var subject = $('#data_subject').val();
+
+        var body = ""+$('#data_exp').val()+'%0A%0A%0A';
+            body += "From："+name+'%0A';
+            body += "Email："+email+'%0A';
+            body += "Tel："+tel;
+
+        mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+        mailTo.click();
+
+        $('#data_name').val('');
+        $('#data_email').val('');
+        $('#data_telephone').val('');
+        $('#data_subject').val('');
+        $('#data_exp').val('');
+
+    });
     </script>
 
     <!-- lazyload -->
-    <script src="js/lazyload.min.js"></script>
     <script>
         var lazyLoadFn = new LazyLoad({
             elements_selector: ".lazyload"
