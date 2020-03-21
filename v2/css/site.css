@@ -2050,6 +2050,16 @@ footer {
     .workEduArea .bottom {
         padding-bottom: 0
     }
+    #portfolioModal {
+        padding: 0;
+        width: 100%;
+    }
+    .modalContainer .info {
+        display: block;
+    }
+    .modalContainer .info > div:first-of-type {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 440px) {
