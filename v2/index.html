@@ -200,11 +200,11 @@
                     <em><span>PORTFOLIO</span></em>
                     <h2>作品集</h2>
                     <div class="type">
-                        <p class="android select" data-type="android">Android</p>
-                        <p class="ios select" data-type="ios">iOS</p>
-                        <p class="web select" data-type="web">Web</p>
-                        <p class="wordpress select" data-type="wordpress">Wordpress</p>
-                        <p class="winform select" data-type="winform">Winform</p>
+                        <p class="android select" data-type="android" style="display: none">Android</p>
+                        <p class="ios select" data-type="ios" style="display: none">iOS</p>
+                        <p class="web select" data-type="web" style="display: none">Web</p>
+                        <p class="wordpress select" data-type="wordpress" style="display: none">Wordpress</p>
+                        <p class="winform select" data-type="winform" style="display: none">Winform</p>
                     </div>
                 </div>
                 <!-- titleBox end -->
@@ -281,7 +281,7 @@
                                 </li>
                                 <li class="full textLi">
                                     <div class="title">內文＊</div>
-                                    <textarea name="data_exp" id="data_exp" class="require inText inFocus" data-note="內文" rows="10"></textarea>
+                                    <textarea name="data_exp" id="data_exp" class="require inText inFocus" data-note="內文" rows="15"></textarea>
                                 </li>
                                 <li class="full">
                                     <div class="rightItem"><!-- rightItem -->
@@ -522,7 +522,7 @@
     </script>
     <script>
         var jsonData;
-        var selectType = ["android","ios","web","wordpress","winform"];
+        var selectType = [];
         $.getJSON("work.json", function(json) {
             jsonData = json.works;
             genWorks();
@@ -536,26 +536,40 @@
                 var url = $(this)[0].url == null ? "#" : $(this)[0].url;
                 var title = $(this)[0].title;
                 var mainImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : $(this)[0].mainImg;
+                var defaultImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : "images/portfolio/main_img_loading.png";
+                console.log(defaultImg);
+                var display = $(this)[0].display;
 
-                html += 
-                    "<li data-type=\""+type+"\" data-index=\""+index+"\">" + 
-                    "   <div class='item'>" + 
-                    "   <!--item-->" + 
-                    "       <div class=\"Img\">" + 
-                    "           <a href=\""+url+"\" title=\""+title+"\" target=\"_blank\">" + 
-                    "               <img class=\"lazyload\" data-src=\""+mainImg+"\" alt=\""+title+"\" title=\""+title+"\" src=\"images/portfolio/main_img_unset.png\">" + 
-                    "           </a>" + 
-                    "       </div>" + 
-                    "       <!--Img end-->" + 
-                    "       <h3 class=\"title\">" +
-                    "           <a href=\""+url+"\" title=\""+title+"\" target=\"_blank\">"+title+"</a>" + 
-                    "       </h3>" + 
-                    "   </div>" + 
-                    "   <!--item end-->" + 
-                    "</li>";
+                if(display) {
+                    if(jQuery.inArray(type, selectType) == -1)
+                        selectType.push(type);
+
+                    html += 
+                        "<li data-type=\""+type+"\" data-index=\""+index+"\">" + 
+                        "   <div class='item'>" + 
+                        "   <!--item-->" + 
+                        "       <div class=\"Img\">" + 
+                        "           <a href=\""+url+"\" title=\""+title+"\" target=\"_blank\">" + 
+                        "               <img class=\"lazyload\" data-src=\""+mainImg+"\" alt=\""+title+"\" title=\""+title+"\" src=\""+defaultImg+"\">" + 
+                        "           </a>" + 
+                        "       </div>" + 
+                        "       <!--Img end-->" + 
+                        "       <h3 class=\"title\">" +
+                        "           <a href=\""+url+"\" title=\""+title+"\" target=\"_blank\">"+title+"</a>" + 
+                        "       </h3>" + 
+                        "   </div>" + 
+                        "   <!--item end-->" + 
+                        "</li>";
+                }
 
                 index++;
             });
+
+            for(var i = 0; i < selectType.length; i++) {
+                var type = selectType[i];
+                $('.portfolioArea .type .'+type).css('display', '');
+            }
+
             $('.portfolioArea ul.caseList.bottom').html('');
             $('.portfolioArea ul.caseList.bottom').append(html);
 
@@ -566,13 +580,109 @@
             $('.portfolioArea ul.caseList.bottom li').on('click', function(e) {
                 e.preventDefault();
                 this.blur();
+
                 var index = $(this).data('index');
+                var data = jsonData[index];
+
+                var id = data.id;
+                var year = data.year;
+                var type = data.type;
+                var title = data.title;
+                var intro = data.intro;
+                var description = $('<div/>').html(data.description).text();
+                var mainImg = data.mainImg == null ? "images/portfolio/main_img_unset.png" : data.mainImg;
+                var imgs = data.imgs;
+                var url = data.url;
+                var relatedUrl = data.relatedUrl;
+                var display = data.display;
+
+                var urlIcon = '';
+                switch(type) {
+                    case "android": 
+                        urlIcon = '<i class="fa fa-android" aria-hidden="true"></i>';
+                        break;
+                    case "iOS":
+                        urlIcon = '<i class="fa fa-apple" aria-hidden="true"></i>';
+                        break;
+                    case "web":
+                        urlIcon = '<i class="fa fa-window-maximize" aria-hidden="true"></i>';
+                        break;
+                    case "wordpress":
+                        urlIcon = '<i class="fa fa-wordpress" aria-hidden="true"></i>';
+                        break;
+                }
+                var urlPart = '<div class="url"><a href="' + url + '" target="_blank">' + urlIcon + title + '</a></div>';
+
+
+                var relatedUrlPart = '';
+                $.each(relatedUrl, function(index, value) {
+                    relatedUrlPart += '<li><a href="' + value.url + '" target="_blank">' + value.title + '</a></li>';
+                });
+                relatedUrlPart = '<div class="related"><h3>相關連結</h3><ul>' + relatedUrlPart + '</ul></div>';
+
+                var imgsPart = '';
+                $.each(imgs,function(index, value) {
+                    imgsPart += '<img id="img'+(index+1)+'" src="' + value + '" />';
+                })
+
+                var imgControl = '<i class="fa fa-caret-left" aria-hidden="true"></i>\n<i class="fa fa-caret-right" aria-hidden="true"></i>';
+
+                var animDuration = 200;
+
+                var script = 
+                    '<script>\n' + 
+                    '   var index = 0;\n' +
+                    '   var count = $(".modalContainer .img img").length;\n' + 
+                    '   $(".modalContainer .img i.fa-caret-left").click(function() {\n' +
+                    '       var oldIndex = index;\n' + 
+                    '       if(index == 0) index = count - 1;\n' +
+                    '       else index -= 1;\n' + 
+                    '       showImage(oldIndex, index);\n' +
+                    '   });\n' +
+                    '   $(".modalContainer .img i.fa-caret-right").click(function() {\n' +
+                    '       var oldIndex = index;\n' + 
+                    '       if(index == count - 1) index = 0;\n' +
+                    '       else index += 1;\n' + 
+                    '       showImage(oldIndex, index);\n' +
+                    '   });\n' +
+                    '   function showImage (hideId, showId) {\n' +
+                    '       if(hideId >= 0)\n' + 
+                    '           $(".modalContainer .img > #img" + hideId + "").fadeOut('+animDuration+', function(){\n' +
+                    '               $(".modalContainer .img > #img" + showId + "").fadeIn('+animDuration+');\n' + 
+                    '           });\n' + 
+                    '       else\n' +
+                    '           $(".modalContainer .img > #img" + showId + "").fadeIn('+animDuration+');\n' + 
+                    '   }\n' + 
+                    '   showImage(-1, 0);\n' + 
+                    '<\/script>\n';
+
+                var html = 
+                    '<div class="modalContainer">' + 
+                    '   <div class="info">' + 
+                    '       <div>' + 
+                    '           <h1><b>' + title + '</b></h1>' +
+                    '           <p>' + intro + '</p>' + 
+                    '       </div>' +
+                    '       <div>' + 
+                    '           <p>' + description + '</p>' +
+                    '           ' + (url == null ? '' : urlPart) + 
+                    '           ' + (relatedUrl == null ? '' : relatedUrlPart) +
+                    '           <p></p>' + 
+                    '       </div>' + 
+                    '   </div>' + 
+                    '   <div class="img">' + 
+                    '       <img  class="lazyload" id="img0" src="'+mainImg+'" />'+
+                    '       ' + (imgs == null ? '' : imgsPart) + 
+                    '       ' + (imgs != null && imgs.length > 0 ? imgControl : '') + 
+                    '   </div>' + 
+                    '</div>' + script;
+
                 $('#portfolioModal').html('');
-                $('#portfolioModal').html(JSON.stringify(jsonData[index]));
+                $('#portfolioModal').html(html);
                 $('#portfolioModal').modal({fadeDuration: 100});
             })
 
-            $('header.targetBtn .menu li i.num').html(jsonData.length);
+            $('header.targetBtn .menu li i.num').html($('.portfolioArea ul.caseList li').length);
         }
 
         $('.portfolioArea .type > p').on('click', function(e) {
