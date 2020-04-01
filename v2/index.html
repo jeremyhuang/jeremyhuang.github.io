@@ -537,7 +537,6 @@
                 var title = $(this)[0].title;
                 var mainImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : $(this)[0].mainImg;
                 var defaultImg = $(this)[0].mainImg == null ? "images/portfolio/main_img_unset.png" : "images/portfolio/main_img_loading.png";
-                console.log(defaultImg);
                 var display = $(this)[0].display;
 
                 if(display) {
@@ -589,7 +588,7 @@
                 var type = data.type;
                 var title = data.title;
                 var intro = data.intro;
-                var description = $('<div/>').html(data.description).text();
+                var description = data.description;
                 var mainImg = data.mainImg == null ? "images/portfolio/main_img_unset.png" : data.mainImg;
                 var imgs = data.imgs;
                 var url = data.url;
@@ -611,7 +610,7 @@
                         urlIcon = '<i class="fa fa-wordpress" aria-hidden="true"></i>';
                         break;
                 }
-                var urlPart = '<div class="url"><a href="' + url + '" target="_blank">' + urlIcon + title + '</a></div>';
+                var urlPart = '<div class="url"><h1>專案連結</h1><a href="' + url + '" target="_blank">' + urlIcon + title + '</a></div>';
 
 
                 var relatedUrlPart = '';
@@ -662,8 +661,9 @@
                     '       <div>' + 
                     '           <h1><b>' + title + '</b></h1>' +
                     '           <p>' + intro + '</p>' + 
+                    '           <p>專案年份　' + year + '</p>' +
                     '       </div>' +
-                    '       <div>' + 
+                    '       <div class="description">' + 
                     '           <p>' + description + '</p>' +
                     '           ' + (url == null ? '' : urlPart) + 
                     '           ' + (relatedUrl == null ? '' : relatedUrlPart) +

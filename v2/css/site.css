@@ -1695,6 +1695,7 @@ footer {
 
 .modalContainer .info > div:first-of-type {
     flex: 0 0 35%;
+    margin-right: 30px;
 }
 
 .modalContainer .info  > div:first-of-type h1 {
@@ -1704,16 +1705,11 @@ footer {
     margin-bottom: 30px;
 }
 
-.modalContainer .info h3 {
-    font-size: 16px;
-    text-transform: none;
-    color: #000000;
-    margin-top: 30px;
-}
-
 .modalContainer .info p,
 .modalContainer .info ul,
-.modalContainer .info li {
+.modalContainer .info li,
+.modalContainer .url h1,
+.modalContainer .info h3 {
     font-size: 14px;
     color: #505050;
     line-height: 1.5;
@@ -1728,8 +1724,24 @@ footer {
     margin-left: 20px;
 }
 
-.modalContainer .url {
-    margin-top: 30px;
+.modalContainer .info .description li {
+    margin-bottom: 25px;
+}
+
+.modalContainer .info .description .related li {
+    margin-bottom: 0;
+}
+
+.modalContainer .info .description h1,
+.modalContainer .url h1,
+.modalContainer .info h3 {
+    margin-bottom: 10px;
+    font-size: 110%;
+}
+
+.modalContainer .url,
+.modalContainer .related {
+    margin-top: 25px;
 }
 
 .modalContainer i {
@@ -2059,6 +2071,10 @@ footer {
     }
     .modalContainer .info > div:first-of-type {
         margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .modalContainer .info > div:first-of-type h1 {
+        margin-bottom: 5px;
     }
 }
 
