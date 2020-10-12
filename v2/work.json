@@ -1,6 +1,19 @@
 {
 	"works": [
 		{
+			"id": 40,
+			"year": 2020,
+			"type": "android",
+			"title": "大慶證券【資產管理】",
+			"intro": "專屬大慶證券顧客的客戶端App",
+			"description": "<ul><li><h1>專案簡介</h1>提供亞洲價值客戶查看基金獲利情況及各項金融動向，並提供客戶各項歷史交易紀錄查詢，包含申購、贖回、轉讓、配息等等。目前僅提供內部員工及部分客戶使用。</li><li><h1>使用技術</h1>Kotlin, picasso, fuel, MPAndroidChart, rxjava2, Firebase(Cloud Messaging, Analytics, Crashlytics)</li></ul>",
+			"mainImg": "images/portfolio/portfolio_main_40.png",
+			"imgs": null,
+			"url": "https://play.google.com/store/apps/details?id=tw.com.tcs.investors",
+			"relatedUrl": null,
+			"display": true
+		},
+		{
 			"id": 39,
 			"year": 2020,
 			"type": "wordpress",
@@ -43,7 +56,7 @@
 			"imgs": null,
 			"url": "https://play.google.com/store/apps/details?id=fund.avc.client&hl=zh-TW",
 			"relatedUrl": null,
-			"display": true
+			"display": false
 		},
 		{
 			"id": 36,
